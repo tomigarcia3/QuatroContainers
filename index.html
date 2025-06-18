@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quatro Containers</title>
+  <link rel="icon" type="image/png" href="img/logo.png">
+
+
+
+ <style>
+.ancla {
+display: block;
+  height: 100px;      /* Altura del header */
+  margin-top: -100px; /* Negativo para compensar */
+visibility: hidden;
+}
+</style>
+
+
+<!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+              <img src="img/logo.png" alt="" height="60" width="60" style="margin-right: 10px;">
+                <div class="logo-text">
+                    <h1 class="logo-title">QUATRO CONTAINERS</h1>
+                    <p class="logo-subtitle">Módulos a tu Medida</p>
+                </div>
+            </a>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#Inicio" class="nav-link active">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Modelos" class="nav-link">
+                            MODELOS
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">QUIENES SOMOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Contacto" class="nav-link">CONTACTO</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="social-links">
+                <a href="https://wa.me/5493544580844?text=Hola!%20Estoy%20interesado%20en%20sus%20soluciones%20modulares.%20Me%20gustaría%20recibir%20más%20información." class="social-icon"><img src="img/whatsapp.png" alt="Whatsapp" width="60" height="60" style="margin-right: 15px;"> </a>
+            </div>
+            
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </header>
+
+<script>
+  const toggleButton = document.querySelector('.mobile-menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+
+  toggleButton.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+
+
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    
+
+    .header {
+            background: #ffffff;
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+            border: 2px solid rgb(0, 159, 227);
+            position: relative;
+            transform: rotate(45deg);
+        }
+
+        .logo-icon::before,
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            background: rgb(0, 159, 227);
+        }
+
+        .logo-icon::before {
+            width: 2px;
+            height: 100%;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+        }
+
+        .logo-icon::after {
+            width: 100%;
+            height: 2px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        .logo-subtitle {
+            font-size: 0.85rem;
+            color: #000000;
+            margin: 0;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            padding: 10px 0;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-link:hover {
+            color: rgb(119, 184, 50); 
+        }
+
+        .nav-link.active {
+            color: rgb(0, 159, 227);
+            border-bottom: 2px rgb(0, 159, 227);
+        }
+
+        .nav-link .dropdown-arrow {
+            margin-left: 5px;
+            font-size: 0.8rem;
+        }
+
+        .social-icon {
+            color: rgb(0, 0, 0);
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: rgb(0, 159, 227);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: rgb(0, 0, 0);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Responsive Header */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .logo-title {
+                font-size: 1.2rem;
+            }
+            
+            .logo-subtitle {
+                font-size: 0.75rem;
+            }
+            @media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        background: white;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 15px 20px;
+        display: none;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+}
+
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 70vh;
+            min-height: 500px;
+            overflow: hidden;
+            background: #000;
+            margin-top: 70px; /* Espacio para el header fijo */
+        }
+
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+        }
+
+        .carousel-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .carousel-content {
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .carousel-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .carousel-description {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+            opacity: 0.95;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        .carousel-btn {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .carousel-btn:hover {
+            background: white;
+            color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            font-size: 2rem;
+            padding: 15px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .carousel-nav:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-prev {
+            left: 20px;
+        }
+
+        .carousel-next {
+            right: 20px;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+        }
+
+        .carousel-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-indicator.active {
+            background: white;
+            transform: scale(1.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .carousel-title {
+                font-size: 2.5rem;
+            }
+            
+            .carousel-description {
+                font-size: 1.1rem;
+            }
+            
+            .carousel-nav {
+                font-size: 1.5rem;
+                padding: 12px 15px;
+            }
+            
+            .carousel-prev {
+                left: 10px;
+            }
+            
+            .carousel-next {
+                right: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel-title {
+                font-size: 2rem;
+            }
+            
+            .carousel-description {
+                font-size: 1rem;
+            }
+            
+            .carousel-btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+        }
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+        }
+
+        .carousel-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .carousel-content {
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .carousel-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .carousel-description {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+            opacity: 0.95;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        .carousel-btn {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .carousel-btn:hover {
+            background: white;
+            color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            font-size: 2rem;
+            padding: 15px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .carousel-nav:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-prev {
+            left: 20px;
+        }
+
+        .carousel-next {
+            right: 20px;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+        }
+
+        .carousel-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-indicator.active {
+            background: white;
+            transform: scale(1.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .carousel-title {
+                font-size: 2.5rem;
+            }
+            
+            .carousel-description {
+                font-size: 1.1rem;
+            }
+            
+            .carousel-nav {
+                font-size: 1.5rem;
+                padding: 12px 15px;
+            }
+            
+            .carousel-prev {
+                left: 10px;
+            }
+            
+            .carousel-next {
+                right: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel-title {
+                font-size: 2rem;
+            }
+            
+            .carousel-description {
+                font-size: 1rem;
+            }
+            
+            .carousel-btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel-container" id="Inicio">
+        <!-- Slide 1 -->
+        <div class="carousel-slide active" style="background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')">
+            <div class="carousel-overlay">
+                <div class="carousel-content">
+                    <h2 class="carousel-title">Soluciones Moduladas</h2>
+                    <p class="carousel-description">
+                        Modulamos viviendas, locales comerciales, quinchos, talleres, a partir de contenedores marítimos.
+                    </p>
+                    <a href="#" class="carousel-btn">Ver Más</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')">
+            <div class="carousel-overlay">
+                <div class="carousel-content">
+                    <h2 class="carousel-title">Construcción Sustentable</h2>
+                    <p class="carousel-description">
+                        Transformamos contenedores en espacios modernos y funcionales con la mejor calidad y diseño.
+                    </p>
+                    <a href="#" class="carousel-btn">Conocer Más</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')">
+            <div class="carousel-overlay">
+                <div class="carousel-content">
+                    <h2 class="carousel-title">Diseños Innovadores</h2>
+                    <p class="carousel-description">
+                        Cada proyecto es único. Adaptamos nuestras soluciones a tus necesidades específicas.
+                    </p>
+                    <a href="#" class="carousel-btn">Ver Proyectos</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navegación -->
+        <button class="carousel-nav carousel-prev" onclick="changeSlide(-1)">‹</button>
+        <button class="carousel-nav carousel-next" onclick="changeSlide(1)">›</button>
+
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+            <div class="carousel-indicator active" onclick="currentSlide(1)"></div>
+            <div class="carousel-indicator" onclick="currentSlide(2)"></div>
+            <div class="carousel-indicator" onclick="currentSlide(3)"></div>
+        </div>
+    </div>
+
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.carousel-indicator');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            // Remover clase active de todos los slides e indicadores
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // Agregar clase active al slide e indicador actual
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            currentSlideIndex += direction;
+            
+            if (currentSlideIndex >= totalSlides) {
+                currentSlideIndex = 0;
+            } else if (currentSlideIndex < 0) {
+                currentSlideIndex = totalSlides - 1;
+            }
+            
+            showSlide(currentSlideIndex);
+        }
+
+        function currentSlide(index) {
+            currentSlideIndex = index - 1;
+            showSlide(currentSlideIndex);
+        }
+
+        // Auto-play del carrusel
+        function autoPlay() {
+            changeSlide(1);
+        }
+
+        // Iniciar auto-play cada 5 segundos
+        let autoPlayInterval = setInterval(autoPlay, 5000);
+
+        // Pausar auto-play cuando el usuario interactúa
+        const carouselContainer = document.querySelector('.carousel-container');
+        carouselContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoPlayInterval);
+        });
+
+        carouselContainer.addEventListener('mouseleave', () => {
+            autoPlayInterval = setInterval(autoPlay, 5000);
+        });
+
+        // Soporte para navegación con teclado
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                changeSlide(-1);
+            } else if (e.key === 'ArrowRight') {
+                changeSlide(1);
+            }
+        });
+    </script>
+
+  <!-- Contenido debajo -->
+   <a id="Modelos" class="ancla"></a>
+  <div class="content">
+    <h2>Modelos</h2>
+    <p>Ejemplo.</p>
+  </div>
+
+  <script>
+    const slides = document.querySelector('.slides');
+    const slideCount = slides.children.length;
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      if(index < 0) index = slideCount - 1;
+      if(index >= slideCount) index = 0;
+      slides.style.transform = `translateX(${-index * 100}vw)`;
+      currentIndex = index;
+    }
+
+    let autoplayInterval = setInterval(() => {
+      showSlide(currentIndex + 1);
+    }, 5000);
+
+    document.querySelector('.nav-arrow.left').addEventListener('click', () => {
+      showSlide(currentIndex - 1);
+      resetAutoplay();
+    });
+
+    document.querySelector('.nav-arrow.right').addEventListener('click', () => {
+      showSlide(currentIndex + 1);
+      resetAutoplay();
+    });
+
+    function resetAutoplay() {
+      clearInterval(autoplayInterval);
+      autoplayInterval = setInterval(() => {
+        showSlide(currentIndex + 1);
+      }, 5000);
+    }
+
+    showSlide(0);
+  </script>
+
+  <!--Tarjetas de producto-->
+
+<!-- CSS para las tarjetas -->
+<style>
+.container-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.container-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+}
+
+.card-image-container {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.container-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.container-card:hover .container-card-image {
+    transform: scale(1.05);
+}
+
+.card-nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.9);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #333;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.card-nav-button:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.card-nav-prev {
+    left: 10px;
+}
+
+.card-nav-next {
+    right: 10px;
+}
+
+.card-dots-indicator {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    z-index: 2;
+}
+
+.card-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    transition: background 0.3s ease;
+}
+
+.card-dot.active {
+    background: white;
+}
+
+.container-card-content {
+    padding: 18px;
+}
+
+.container-card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.card-features {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.card-feature {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #666;
+    font-size: 14px;
+}
+
+.card-feature-icon {
+    width: 16px;
+    height: 16px;
+    fill: #555;
+}
+
+.card-view-more-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, rgb(0, 159, 227) 0%, rgb(119, 184, 50) 100%);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-view-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    background: linear-gradient(45deg, rgb(119, 184, 50) 0%, rgb(0, 159, 227) 100%);
+}
+
+@media (max-width: 1024px) {
+    .container-cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .container-card-title {
+        font-size: 16px;
+    }
+    
+    .card-feature {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-cards {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<!-- HTML de las tarjetas -->
+<div class="container-cards" >
+    <!-- Casa Container 90m² -->
+    <div class="container-card">
+        <div class="card-image-container">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=300&h=180&fit=crop&crop=center" alt="Casa Container 90m²" class="container-card-image">
+            <button class="card-nav-button card-nav-prev" onclick="previousCardImage(this)">‹</button>
+            <button class="card-nav-button card-nav-next" onclick="nextCardImage(this)">›</button>
+            <div class="card-dots-indicator">
+                <div class="card-dot active"></div>
+                <div class="card-dot"></div>
+                <div class="card-dot"></div>
+            </div>
+        </div>
+        <div class="container-card-content">
+            <h3 class="container-card-title">Casa Container 90m²</h3>
+            <div class="card-features">
+                <div class="card-feature">
+                    <svg class="card-feature-icon" viewBox="0 0 24 24">
+                        <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+                    </svg>
+                    <span>5 Amb</span>
+                </div>
+                <div class="card-feature">
+                    <svg class="card-feature-icon" viewBox="0 0 24 24">
+                        <path d="M8,14A2,2 0 0,0 6,16A2,2 0 0,0 8,18A2,2 0 0,0 10,16A2,2 0 0,0 8,14M16,14A2,2 0 0,0 14,16A2,2 0 0,0 16,18A2,2 0 0,0 18,16A2,2 0 0,0 16,14M4,15.27V16.73C4,17.4 4.6,18 5.27,18H18.73C19.4,18 20,17.4 20,16.73V15.27L18.73,14H5.27L4,15.27Z" />
+                    </svg>
+                    <span>2 Baño</span>
+                </div>
+            </div>
+            <button class="card-view-more-btn">Más información ➜</button>
+        </div>
+    </div>
+
+    <!-- Casa Container 60m² -->
+    <div class="container-card">
+        <div class="card-image-container">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=300&h=180&fit=crop&crop=center" alt="Casa Container 60m²" class="container-card-image">
+            <button class="card-nav-button card-nav-prev" onclick="previousCardImage(this)">‹</button>
+            <button class="card-nav-button card-nav-next" onclick="nextCardImage(this)">›</button>
+            <div class="card-dots-indicator">
+                <div class="card-dot active"></div>
+                <div class="card-dot"></div>
+                <div class="card-dot"></div>
+            </div>
+        </div>
+        <div class="container-card-content">
+            <h3 class="container-card-title">Casa Container 60m²</h3>
+            <div class="card-features">
+                <div class="card-feature">
+                    <svg class="card-feature-icon" viewBox="0 0 24 24">
+                        <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+                    </svg>
+                    <span>4 Amb</span>
+                </div>
+                <div class="card-feature">
+                    <svg class="card-feature-icon" viewBox="0 0 24 24">
+                        <path d="M8,14A2,2 0 0,0 6,16A2,2 0 0,0 8,18A2,2 0 0,0 10,16A2,2 0 0,0 8,14M16,14A2,2 0 0,0 14,16A2,2 0 0,0 16,18A2,2 0 0,0 18,16A2,2 0 0,0 16,14M4,15.27V16.73C4,17.4 4.6,18 5.27,18H18.73C19.4,18 20,17.4 20,16.73V15.27L18.73,14H5.27L4,15.27Z" />
+                    </svg>
+                    <span>1 Baño</span>
+                </div>
+            </div>
+            <button class="card-view-more-btn">Más información ➜</button>
+        </div>
+    </div>
+
+    <!-- Casa Container 30m² -->
+    <div class="container-card">
+        <div class="card-image-container">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=300&h=180&fit=crop&crop=center" alt="Casa Container 30m²" class="container-card-image">
+            <button class="card-nav-button card-nav-prev" onclick="previousCardImage(this)">‹</button>
+            <button class="card-nav-button card-nav-next" onclick="nextCardImage(this)">›</button>
+            <div class="card-dots-indicator">
+                <div class="card-dot active"></div>
+                <div class="card-dot"></div>
+            </div>
+        </div>
+        <div class="container-card-content">
+            <h3 class="container-card-title">Casa Container 30m²</h3>
+            <div class="card-features">
+                <div class="card-feature">
+                    <svg class="card-feature-icon" viewBox="0 0 24 24">
+                        <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+                    </svg>
+                    <span>2 Amb</span>
+                </div>
+                <div class="card-feature">
+                    <svg class="card-feature-icon" viewBox="0 0 24 24">
+                        <path d="M8,14A2,2 0 0,0 6,16A2,2 0 0,0 8,18A2,2 0 0,0 10,16A2,2 0 0,0 8,14M16,14A2,2 0 0,0 14,16A2,2 0 0,0 16,18A2,2 0 0,0 18,16A2,2 0 0,0 16,14M4,15.27V16.73C4,17.4 4.6,18 5.27,18H18.73C19.4,18 20,17.4 20,16.73V15.27L18.73,14H5.27L4,15.27Z" />
+                    </svg>
+                    <span>1 Baño</span>
+                </div>
+            </div>
+            <button class="card-view-more-btn">Más información ➜</button>
+        </div>
+    </div>
+
+    <!-- Casa Container 15m² -->
+    <div class="container-card">
+        <div class="card-image-container">
+            <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=300&h=180&fit=crop&crop=center" alt="Casa Container 15m²" class="container-card-image">
+            <button class="card-nav-button card-nav-prev" onclick="previousCardImage(this)">‹</button>
+            <button class="card-nav-button card-nav-next" onclick="nextCardImage(this)">›</button>
+            <div class="card-dots-indicator">
+                <div class="card-dot active"></div>
+                <div class="card-dot"></div>
+            </div>
+        </div>
+        <div class="container-card-content">
+            <h3 class="container-card-title">Casa Container 15m²</h3>
+            <div class="card-features">
+                <div class="card-feature">
+                    <svg class="card-feature-icon" viewBox="0 0 24 24">
+                        <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+                    </svg>
+                    <span>1 Amb</span>
+                </div>
+                <div class="card-feature">
+                    <svg class="card-feature-icon" viewBox="0 0 24 24">
+                        <path d="M8,14A2,2 0 0,0 6,16A2,2 0 0,0 8,18A2,2 0 0,0 10,16A2,2 0 0,0 8,14M16,14A2,2 0 0,0 14,16A2,2 0 0,0 16,18A2,2 0 0,0 18,16A2,2 0 0,0 16,14M4,15.27V16.73C4,17.4 4.6,18 5.27,18H18.73C19.4,18 20,17.4 20,16.73V15.27L18.73,14H5.27L4,15.27Z" />
+                    </svg>
+                    <span>1 Baño</span>
+                </div>
+            </div>
+            <button class="card-view-more-btn">Más información ➜</button>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript para la funcionalidad -->
+<script>
+const cardImages = [
+    [
+        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=250&fit=crop&crop=center',
+        'https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=400&h=250&fit=crop&crop=center',
+        'https://images.unsplash.com/photo-1600563438938-a42eb1e9ac5b?w=400&h=250&fit=crop&crop=center'
+    ],
+    [
+        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=250&fit=crop&crop=center',
+        'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&h=250&fit=crop&crop=center',
+        'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=400&h=250&fit=crop&crop=center'
+    ],
+    [
+        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&h=250&fit=crop&crop=center',
+        'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=400&h=250&fit=crop&crop=center'
+    ],
+    [
+        'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=400&h=250&fit=crop&crop=center',
+        'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=400&h=250&fit=crop&crop=center'
+    ]
+];
+
+let currentCardImageIndex = [0, 0, 0, 0,];
+
+function updateCardImage(cardIndex) {
+    const cards = document.querySelectorAll('.container-card');
+    const card = cards[cardIndex];
+    const img = card.querySelector('.container-card-image');
+    const dots = card.querySelectorAll('.card-dot');
+    
+    img.src = cardImages[cardIndex][currentCardImageIndex[cardIndex]];
+    
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentCardImageIndex[cardIndex]);
+    });
+}
+
+function nextCardImage(button) {
+    const card = button.closest('.container-card');
+    const cardIndex = Array.from(document.querySelectorAll('.container-card')).indexOf(card);
+    
+    currentCardImageIndex[cardIndex] = (currentCardImageIndex[cardIndex] + 1) % cardImages[cardIndex].length;
+    updateCardImage(cardIndex);
+}
+
+function previousCardImage(button) {
+    const card = button.closest('.container-card');
+    const cardIndex = Array.from(document.querySelectorAll('.container-card')).indexOf(card);
+    
+    currentCardImageIndex[cardIndex] = currentCardImageIndex[cardIndex] === 0 
+        ? cardImages[cardIndex].length - 1 
+        : currentCardImageIndex[cardIndex] - 1;
+    updateCardImage(cardIndex);
+}
+
+// Funcionalidad para botones "ver más"
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.card-view-more-btn').forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+            const sizes = ['90m²', '60m²', '30m²', '15m²'];
+            // Aquí puedes cambiar la funcionalidad según necesites
+            console.log(`Ver más información sobre Casa Container ${sizes[index]}`);
+            // Ejemplo: window.location.href = `/casa-container-${sizes[index].replace('²', '')}`;
+        });
+    });
+});
+</script>
+
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Contact Section Styles */
+        .contact-section {
+            background: linear-gradient(135deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23333" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.1;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-badge {
+            display: inline-block;
+            background: rgba(17, 255, 92, 0.418);
+            color: rgb(42, 164, 217);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(34, 0, 255, 0.397);
+        }
+
+        .contact-title {
+            font-size: 3.5rem;
+            color: rgb(119, 184, 50);
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            line-height: 1.2;
+        }
+
+        .contact-subtitle {
+            font-size: 1.3rem;
+            color: #000000;
+            margin-bottom: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .contact-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .contact-feature {
+            background: rgba(40, 190, 60, 0.274);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgb(0, 200, 255);
+            border-radius: 15px;
+            padding: 30px 20px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-feature:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 215, 0, 0.1);
+            border-color: rgba(255, 215, 0, 0.3);
+        }
+
+        .contact-feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .contact-feature-title {
+            font-size: 1.2rem;
+            color: rgb(255, 255, 255);
+            text-shadow: -1px -1px 0 rgb(49, 182, 223),
+                        1px -1px 0 rgb(49, 182, 223),
+                        -1px 1px 0 rgb(49, 182, 223),
+                        1px 1px 0 rgb(49, 182, 223);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .contact-feature-text {
+            color: #000000;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .whatsapp-cta {
+            position: relative;
+            display: inline-block;
+        }
+
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .whatsapp-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .whatsapp-btn:hover::before {
+            left: 100%;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-icon {
+            font-size: 1.8rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .contact-urgency {
+            margin-top: 30px;
+            font-size: 1rem;
+            color: rgb(255, 255, 255);
+            text-shadow: -1px -1px 0 black,
+                        1px -1px 0 black,
+                        -1px 1px 0 black,
+                        1px 1px 0 black;
+            font-weight: 600;
+        }
+
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .floating-element {
+            position: absolute;
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contact-title {
+                font-size: 2.5rem;
+            }
+            
+            .contact-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .contact-features {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .whatsapp-btn {
+                padding: 18px 35px;
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-title {
+                font-size: 2rem;
+            }
+            
+            .whatsapp-btn {
+                padding: 16px 30px;
+                font-size: 1rem;
+            }
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+
+    </style>
+
+<a id="Contacto" class="ancla"></a>
+<!-- Contact Section -->
+    <section class="contact-section">
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+        
+        <div class="contact-container">
+            <div class="contact-badge">¿Listo para tu proyecto?</div>
+            
+            <h2 class="contact-title">
+                Transformamos tu idea<br>
+                en <span style="color: rgb(0, 159, 227);">realidad</span>
+            </h2>
+            
+            <p class="contact-subtitle">
+                Nuestro equipo de expertos está esperando para ayudarte a crear el espacio modular perfecto. 
+                Obtén tu cotización personalizada en minutos.
+            </p>
+            
+            <div class="contact-features">
+                <div class="contact-feature">
+                    <span class="contact-feature-icon">⚡</span>
+                    <h3 class="contact-feature-title">Respuesta Inmediata</h3>
+                    <p class="contact-feature-text">Te respondemos rapidamente durante horario comercial</p>
+                </div>
+                
+                <div class="contact-feature">
+                    <span class="contact-feature-icon">📋</span>
+                    <h3 class="contact-feature-title">Cotización Gratuita</h3>
+                    <p class="contact-feature-text">Recibe un presupuesto detallado sin compromiso</p>
+                </div>
+                
+                <div class="contact-feature">
+                    <span class="contact-feature-icon">🏗️</span>
+                    <h3 class="contact-feature-title">Asesoría Especializada</h3>
+                    <p class="contact-feature-text">Te guiamos en cada paso de tu proyecto modular</p>
+                </div>
+            </div>
+            
+            <div class="whatsapp-cta">
+                <a href="https://wa.me/5493544580844?text=Hola!%20Estoy%20interesado%20en%20sus%20soluciones%20modulares.%20Me%20gustaría%20recibir%20más%20información." 
+                   class="whatsapp-btn" 
+                   target="_blank">
+                    <span class="whatsapp-icon">💬</span>
+                    Solicitar una Cotización
+                </a>
+            </div>
+            
+            <div class="contact-urgency">
+                ⏰ ¡Solo tomará 2 minutos obtener tu cotización!
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.carousel-indicator');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            // Remover clase active de todos los slides e indicadores
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // Agregar clase active al slide e indicador actual
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            currentSlideIndex += direction;
+            
+            if (currentSlideIndex >= totalSlides) {
+                currentSlideIndex = 0;
+            } else if (currentSlideIndex < 0) {
+                currentSlideIndex = totalSlides - 1;
+            }
+            
+            showSlide(currentSlideIndex);
+        }
+
+        function currentSlide(index) {
+            currentSlideIndex = index - 1;
+            showSlide(currentSlideIndex);
+        }
+
+        // Auto-play del carrusel
+        function autoPlay() {
+            changeSlide(1);
+        }
+
+        // Iniciar auto-play cada 5 segundos
+        let autoPlayInterval = setInterval(autoPlay, 5000);
+
+        // Pausar auto-play cuando el usuario interactúa
+        const carouselContainer = document.querySelector('.carousel-container');
+        carouselContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoPlayInterval);
+        });
+
+        carouselContainer.addEventListener('mouseleave', () => {
+            autoPlayInterval = setInterval(autoPlay, 5000);
+        });
+
+        // Soporte para navegación con teclado
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                changeSlide(-1);
+            } else if (e.key === 'ArrowRight') {
+                changeSlide(1);
+            }
+        });
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f5f5f5;
+            padding: 50px 0;
+        }
+
+        .footer {
+            background: #00485a;
+            padding: 60px 0 40px 0;
+            color: white;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-right: 50px;
+        }
+
+        .footer-logo-icon {
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+            border: 3px solid white;
+            position: relative;
+            transform: rotate(45deg);
+            flex-shrink: 0;
+        }
+
+        .footer-logo-icon::before,
+        .footer-logo-icon::after {
+            content: '';
+            position: absolute;
+            background: white;
+        }
+
+        .footer-logo-icon::before {
+            width: 3px;
+            height: 100%;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+        }
+
+        .footer-logo-icon::after {
+            width: 100%;
+            height: 3px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        .footer-logo-text h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .footer-logo-text p {
+            font-size: 1.1rem;
+            color: #ccc;
+            letter-spacing: 1px;
+        }
+
+        .footer-divider {
+            width: 100%;
+            height: 1px;
+            background: #555;
+            margin-bottom: 50px;
+        }
+
+        .footer-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .footer-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-contact-icon {
+            color: #ffd700;
+            font-size: 1.3rem;
+            margin-right: 15px;
+            width: 25px;
+            flex-shrink: 0;
+        }
+
+        .footer-contact-text {
+            color: #ddd;
+            line-height: 1.5;
+        }
+
+        .footer-contact-item:hover .footer-contact-text {
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .footer-header {
+                flex-direction: column;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            .footer-logo {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .footer-logo-text h2 {
+                font-size: 2rem;
+            }
+
+            .footer-logo-text p {
+                font-size: 1rem;
+            }
+
+            .footer-content h3 {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            .footer-info {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-contact-item {
+                justify-content: center;
+                margin-bottom: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer {
+                padding: 40px 0 30px 0;
+            }
+
+            .footer-logo-icon {
+                width: 50px;
+                height: 50px;
+            }
+
+            .footer-logo-text h2 {
+                font-size: 1.6rem;
+            }
+
+            .footer-contact-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 5px;
+            }
+
+            .footer-contact-icon {
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Header del Footer -->
+            <div class="footer-header">
+                <div><img src="img/logo.png" alt="" width= "80" height="80" style="display: block; margin-right: 10px;"></div>
+                    <div class="footer-logo-text">
+                        <h2>  QUATRO CONTAINERS</h2>
+                        <p>  Construcción amigable con el medio ambiente</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Línea divisoria -->
+            <div class="footer-divider"></div>
+
+            <!-- Contenido del Footer -->
+            <div class="footer-content" style="margin-left: 20px;">
+                <h3>Tu próximo proyecto, comienza contactándonos!</h3>
+                
+                <div class="footer-info">
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon">📍</span>
+                        <span class="footer-contact-text">Av. Belgrano 2734 Villa Dolores, Cordoba</span>
+                    </div>
+                    
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon">📱</span>
+                        <span class="footer-contact-text">+54 9 3544 563679 / +54 9 3544 405325
+                        </span>
+                    </div>
+                    
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon">✉️</span>
+                        <span class="footer-contact-text">Quatrocontainers@gmail.com</span>
+                    </div>
+                    
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon">🕒</span>
+                        <span class="footer-contact-text">Horario</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
