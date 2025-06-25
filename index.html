@@ -22,9 +22,9 @@ visibility: hidden;
     <header class="header">
         <div class="header-container">
             <a href="#" class="logo">
-              <img src="img/logo.png" alt="" height="60" width="60" style="margin-right: 10px;">
+              <img src="img/logo.png" alt="" height="90" width="90" style="margin-right: 20px;">
                 <div class="logo-text">
-                    <h1 class="logo-title">QUATRO CONTAINERS</h1>
+                    <h1 class="logo-title" style="color: rgb(0, 159, 227);">QUATRO</h1><h1 class="logo-title" style="color: rgb(119, 184, 50);"> CONTAINERS</h1>
                     <p class="logo-subtitle">Módulos a tu Medida</p>
                 </div>
             </a>
@@ -49,7 +49,7 @@ visibility: hidden;
             </nav>
             
             <div class="social-links">
-                <a href="https://wa.me/5493544580844?text=Hola!%20Estoy%20interesado%20en%20sus%20soluciones%20modulares.%20Me%20gustaría%20recibir%20más%20información." class="social-icon"><img src="img/whatsapp.png" alt="Whatsapp" width="60" height="60" style="margin-right: 15px;"> </a>
+                <a href="https://wa.me/5493544580844?text=Hola!%20Estoy%20interesado%20en%20sus%20soluciones%20modulares.%20Me%20gustaría%20recibir%20más%20información." class="social-icon"><img src="img/whatsapp.png" alt="Whatsapp" width="50" height="50" style="margin-right: 15px;"> </a>
             </div>
             
             <button class="mobile-menu-toggle">☰</button>
@@ -75,10 +75,9 @@ visibility: hidden;
       font-family: Arial, sans-serif;
     }
 
-    
 
     .header {
-            background: #ffffff;
+            background: rgb(167, 205, 222);
             padding: 15px 0;
             position: fixed;
             top: 0;
@@ -142,8 +141,12 @@ visibility: hidden;
         }
 
         .logo-title {
-            font-size: 1.4rem;
+            font-size: 2rem;
             font-weight: bold;
+            text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.502),
+                        1px -1px 0 rgba(0, 0, 0, 0.502),
+                        -1px 1px 0 rgba(0, 0, 0, 0.502),
+                        1px 1px 0 rgba(0, 0, 0, 0.502);
             letter-spacing: 1px;
             margin: 0;
         }
@@ -170,8 +173,8 @@ visibility: hidden;
             text-decoration: none;
             font-weight: 500;
             text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
+            font-size: 1.3rem;
+            letter-spacing: 0.4px;
             padding: 10px 0;
             transition: color 0.3s ease;
             display: flex;
@@ -591,7 +594,7 @@ visibility: hidden;
         }
     </style>
 </head>
-<body>
+<body style="background-color: rgb(140, 192, 86);"></body>>
     <div class="carousel-container" id="Inicio">
         <!-- Slide 1 -->
         <div class="carousel-slide active" style="background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')">
@@ -708,8 +711,12 @@ visibility: hidden;
   <!-- Contenido debajo -->
    <a id="Modelos" class="ancla"></a>
   <div class="content">
-    <h2>Modelos</h2>
-    <p>Ejemplo.</p>
+   <center> <h2  style="color: rgb(42, 164, 217); text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.443),
+                        1px -1px 0 rgba(0, 0, 0, 0.473),
+                        -1px 1px 0 rgba(0, 0, 0, 0.493),
+                        1px 1px 0 rgba(0, 0, 0, 0.532);
+                        font-size: 3.0rem;
+                        margin-top: 20px;">Modelos</h2></center>
   </div>
 
   <script>
@@ -750,381 +757,594 @@ visibility: hidden;
 
   <!--Tarjetas de producto-->
 
-<!-- CSS para las tarjetas -->
-<style>
-.container-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
-.container-card {
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-}
+    <style>
+        .container-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-.container-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.2);
-}
+        .container-card {
+            background: rgb(144, 198, 221);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
 
-.card-image-container {
-    position: relative;
-    height: 180px;
-    overflow: hidden;
-}
+        .container-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+        }
 
-.container-card-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
+        .card-image-container {
+            position: relative;
+            height: 180px;
+            overflow: hidden;
+        }
 
-.container-card:hover .container-card-image {
-    transform: scale(1.05);
-}
+        .container-card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
 
-.card-nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255,255,255,0.9);
-    border: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    color: #333;
-    transition: all 0.3s ease;
-    z-index: 2;
-}
+        .container-card:hover .container-card-image {
+            transform: scale(1.05);
+        }
 
-.card-nav-button:hover {
-    background: white;
-    transform: translateY(-50%) scale(1.1);
-}
+        .card-nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.9);
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #333;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
 
-.card-nav-prev {
-    left: 10px;
-}
+        .card-nav-button:hover {
+            background: white;
+            transform: translateY(-50%) scale(1.1);
+        }
 
-.card-nav-next {
-    right: 10px;
-}
+        .card-nav-prev {
+            left: 10px;
+        }
 
-.card-dots-indicator {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 6px;
-    z-index: 2;
-}
+        .card-nav-next {
+            right: 10px;
+        }
 
-.card-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.5);
-    transition: background 0.3s ease;
-}
+        .card-dots-indicator {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 6px;
+            z-index: 2;
+        }
 
-.card-dot.active {
-    background: white;
-}
+        .card-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            transition: background 0.3s ease;
+        }
 
-.container-card-content {
-    padding: 18px;
-}
+        .card-dot.active {
+            background: white;
+        }
 
-.container-card-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 12px;
-}
+        .container-card-content {
+            padding: 18px;
+        }
 
-.card-features {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 15px;
-}
+        .container-card-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 12px;
+        }
 
-.card-feature {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: #666;
-    font-size: 14px;
-}
+        .card-features {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
 
-.card-feature-icon {
-    width: 16px;
-    height: 16px;
-    fill: #555;
-}
+        .card-feature {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #666;
+            font-size: 14px;
+        }
 
-.card-view-more-btn {
-    width: 100%;
-    padding: 12px;
-    background: linear-gradient(45deg, rgb(0, 159, 227) 0%, rgb(119, 184, 50) 100%);
-    border: none;
-    border-radius: 8px;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
+        .card-feature-icon {
+            width: 16px;
+            height: 16px;
+            fill: #555;
+        }
 
-.card-view-more-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    background: linear-gradient(45deg, rgb(119, 184, 50) 0%, rgb(0, 159, 227) 100%);
-}
+        .card-view-more-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(45deg, rgb(0, 159, 227) 0%, rgb(119, 184, 50) 100%);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-@media (max-width: 1024px) {
-    .container-cards {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-    }
-}
+        .card-view-more-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            background: linear-gradient(45deg, rgb(119, 184, 50) 0%, rgb(0, 159, 227) 100%);
+        }
 
-@media (max-width: 768px) {
-    .container-cards {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        padding: 15px;
-    }
-    
-    .container-card-title {
-        font-size: 16px;
-    }
-    
-    .card-feature {
-        font-size: 12px;
-    }
-}
+        @media (max-width: 1024px) {
+            .container-cards {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+            }
+        }
 
-@media (max-width: 480px) {
-    .container-cards {
-        grid-template-columns: 1fr;
-    }
-}
-</style>
+        @media (max-width: 768px) {
+            .container-cards {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                padding: 15px;
+            }
+            
+            .container-card-title {
+                font-size: 16px;
+            }
+            
+            .card-feature {
+                font-size: 12px;
+            }
+        }
 
-<!-- HTML de las tarjetas -->
-<div class="container-cards" >
-    <!-- Casa Container 90m² -->
-    <div class="container-card">
-        <div class="card-image-container">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=300&h=180&fit=crop&crop=center" alt="Casa Container 90m²" class="container-card-image">
-            <button class="card-nav-button card-nav-prev" onclick="previousCardImage(this)">‹</button>
-            <button class="card-nav-button card-nav-next" onclick="nextCardImage(this)">›</button>
-            <div class="card-dots-indicator">
-                <div class="card-dot active"></div>
-                <div class="card-dot"></div>
-                <div class="card-dot"></div>
+        @media (max-width: 480px) {
+            .container-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-cards">
+        <!-- Casa Container 90m² -->
+        <div class="container-card">
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=300&h=180&fit=crop&crop=center" alt="Casa Container 90m²" class="container-card-image">
+                <button class="card-nav-button card-nav-prev" onclick="previousCardImage(this)">‹</button>
+                <button class="card-nav-button card-nav-next" onclick="nextCardImage(this)">›</button>
+                <div class="card-dots-indicator">
+                    <div class="card-dot active"></div>
+                    <div class="card-dot"></div>
+                    <div class="card-dot"></div>
+                </div>
+            </div>
+            <div class="container-card-content">
+                <h3 class="container-card-title">Casa Container 90m²</h3>
+                <div class="card-features">
+                    <div class="card-feature">
+                        <svg class="card-feature-icon" viewBox="0 0 24 24">
+                            <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+                        </svg>
+                        <span>5 Amb</span>
+                    </div>
+                    <div class="card-feature">
+                        <svg class="card-feature-icon" viewBox="0 0 24 24">
+                            <path d="M8,14A2,2 0 0,0 6,16A2,2 0 0,0 8,18A2,2 0 0,0 10,16A2,2 0 0,0 8,14M16,14A2,2 0 0,0 14,16A2,2 0 0,0 16,18A2,2 0 0,0 18,16A2,2 0 0,0 16,14M4,15.27V16.73C4,17.4 4.6,18 5.27,18H18.73C19.4,18 20,17.4 20,16.73V15.27L18.73,14H5.27L4,15.27Z" />
+                        </svg>
+                        <span>2 Baño</span>
+                    </div>
+                </div>
+                <button class="card-view-more-btn">Más información ➜</button>
             </div>
         </div>
-        <div class="container-card-content">
-            <h3 class="container-card-title">Casa Container 90m²</h3>
-            <div class="card-features">
-                <div class="card-feature">
-                    <svg class="card-feature-icon" viewBox="0 0 24 24">
-                        <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
-                    </svg>
-                    <span>5 Amb</span>
-                </div>
-                <div class="card-feature">
-                    <svg class="card-feature-icon" viewBox="0 0 24 24">
-                        <path d="M8,14A2,2 0 0,0 6,16A2,2 0 0,0 8,18A2,2 0 0,0 10,16A2,2 0 0,0 8,14M16,14A2,2 0 0,0 14,16A2,2 0 0,0 16,18A2,2 0 0,0 18,16A2,2 0 0,0 16,14M4,15.27V16.73C4,17.4 4.6,18 5.27,18H18.73C19.4,18 20,17.4 20,16.73V15.27L18.73,14H5.27L4,15.27Z" />
-                    </svg>
-                    <span>2 Baño</span>
+
+        <!-- Casa Container 60m² -->
+        <div class="container-card">
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=300&h=180&fit=crop&crop=center" alt="Casa Container 60m²" class="container-card-image">
+                <button class="card-nav-button card-nav-prev" onclick="previousCardImage(this)">‹</button>
+                <button class="card-nav-button card-nav-next" onclick="nextCardImage(this)">›</button>
+                <div class="card-dots-indicator">
+                    <div class="card-dot active"></div>
+                    <div class="card-dot"></div>
+                    <div class="card-dot"></div>
                 </div>
             </div>
-            <button class="card-view-more-btn">Más información ➜</button>
+            <div class="container-card-content">
+                <h3 class="container-card-title">Casa Container 60m²</h3>
+                <div class="card-features">
+                    <div class="card-feature">
+                        <svg class="card-feature-icon" viewBox="0 0 24 24">
+                            <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+                        </svg>
+                        <span>4 Amb</span>
+                    </div>
+                    <div class="card-feature">
+                        <svg class="card-feature-icon" viewBox="0 0 24 24">
+                            <path d="M8,14A2,2 0 0,0 6,16A2,2 0 0,0 8,18A2,2 0 0,0 10,16A2,2 0 0,0 8,14M16,14A2,2 0 0,0 14,16A2,2 0 0,0 16,18A2,2 0 0,0 18,16A2,2 0 0,0 16,14M4,15.27V16.73C4,17.4 4.6,18 5.27,18H18.73C19.4,18 20,17.4 20,16.73V15.27L18.73,14H5.27L4,15.27Z" />
+                        </svg>
+                        <span>1 Baño</span>
+                    </div>
+                </div>
+                <button class="card-view-more-btn">Más información ➜</button>
+            </div>
+        </div>
+
+        <!-- Casa Container 30m² -->
+        <div class="container-card">
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=300&h=180&fit=crop&crop=center" alt="Casa Container 30m²" class="container-card-image">
+                <button class="card-nav-button card-nav-prev" onclick="previousCardImage(this)">‹</button>
+                <button class="card-nav-button card-nav-next" onclick="nextCardImage(this)">›</button>
+                <div class="card-dots-indicator">
+                    <div class="card-dot active"></div>
+                    <div class="card-dot"></div>
+                </div>
+            </div>
+            <div class="container-card-content">
+                <h3 class="container-card-title">Casa Container 30m²</h3>
+                <div class="card-features">
+                    <div class="card-feature">
+                        <svg class="card-feature-icon" viewBox="0 0 24 24">
+                            <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+                        </svg>
+                        <span>2 Amb</span>
+                    </div>
+                    <div class="card-feature">
+                        <svg class="card-feature-icon" viewBox="0 0 24 24">
+                            <path d="M8,14A2,2 0 0,0 6,16A2,2 0 0,0 8,18A2,2 0 0,0 10,16A2,2 0 0,0 8,14M16,14A2,2 0 0,0 14,16A2,2 0 0,0 16,18A2,2 0 0,0 18,16A2,2 0 0,0 16,14M4,15.27V16.73C4,17.4 4.6,18 5.27,18H18.73C19.4,18 20,17.4 20,16.73V15.27L18.73,14H5.27L4,15.27Z" />
+                        </svg>
+                        <span>1 Baño</span>
+                    </div>
+                </div>
+                <button class="card-view-more-btn">Más información ➜</button>
+            </div>
+        </div>
+
+        <!-- Casa Container 15m² -->
+        <div class="container-card">
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=300&h=180&fit=crop&crop=center" alt="Casa Container 15m²" class="container-card-image">
+                <button class="card-nav-button card-nav-prev" onclick="previousCardImage(this)">‹</button>
+                <button class="card-nav-button card-nav-next" onclick="nextCardImage(this)">›</button>
+                <div class="card-dots-indicator">
+                    <div class="card-dot active"></div>
+                    <div class="card-dot"></div>
+                </div>
+            </div>
+            <div class="container-card-content">
+                <h3 class="container-card-title">Casa Container 15m²</h3>
+                <div class="card-features">
+                    <div class="card-feature">
+                        <svg class="card-feature-icon" viewBox="0 0 24 24">
+                            <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+                        </svg>
+                        <span>1 Amb</span>
+                    </div>
+                    <div class="card-feature">
+                        <svg class="card-feature-icon" viewBox="0 0 24 24">
+                            <path d="M8,14A2,2 0 0,0 6,16A2,2 0 0,0 8,18A2,2 0 0,0 10,16A2,2 0 0,0 8,14M16,14A2,2 0 0,0 14,16A2,2 0 0,0 16,18A2,2 0 0,0 18,16A2,2 0 0,0 16,14M4,15.27V16.73C4,17.4 4.6,18 5.27,18H18.73C19.4,18 20,17.4 20,16.73V15.27L18.73,14H5.27L4,15.27Z" />
+                        </svg>
+                        <span>1 Baño</span>
+                    </div>
+                </div>
+                <button class="card-view-more-btn">Más información ➜</button>
+            </div>
+        </div>
+
+        <!-- Casa Container 120m² (NUEVA) -->
+        <div class="container-card">
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=300&h=180&fit=crop&crop=center" alt="Casa Container 120m²" class="container-card-image">
+                <button class="card-nav-button card-nav-prev" onclick="previousCardImage(this)">‹</button>
+                <button class="card-nav-button card-nav-next" onclick="nextCardImage(this)">›</button>
+                <div class="card-dots-indicator">
+                    <div class="card-dot active"></div>
+                    <div class="card-dot"></div>
+                    <div class="card-dot"></div>
+                </div>
+            </div>
+            <div class="container-card-content">
+                <h3 class="container-card-title">Casa Container 120m²</h3>
+                <div class="card-features">
+                    <div class="card-feature">
+                        <svg class="card-feature-icon" viewBox="0 0 24 24">
+                            <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+                        </svg>
+                        <span>6 Amb</span>
+                    </div>
+                    <div class="card-feature">
+                        <svg class="card-feature-icon" viewBox="0 0 24 24">
+                            <path d="M8,14A2,2 0 0,0 6,16A2,2 0 0,0 8,18A2,2 0 0,0 10,16A2,2 0 0,0 8,14M16,14A2,2 0 0,0 14,16A2,2 0 0,0 16,18A2,2 0 0,0 18,16A2,2 0 0,0 16,14M4,15.27V16.73C4,17.4 4.6,18 5.27,18H18.73C19.4,18 20,17.4 20,16.73V15.27L18.73,14H5.27L4,15.27Z" />
+                        </svg>
+                        <span>3 Baño</span>
+                    </div>
+                </div>
+                <button class="card-view-more-btn">Más información ➜</button>
+            </div>
+        </div>
+
+        <!-- Casa Container 45m² (NUEVA) -->
+        <div class="container-card">
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=300&h=180&fit=crop&crop=center" alt="Casa Container 45m²" class="container-card-image">
+                <button class="card-nav-button card-nav-prev" onclick="previousCardImage(this)">‹</button>
+                <button class="card-nav-button card-nav-next" onclick="nextCardImage(this)">›</button>
+                <div class="card-dots-indicator">
+                    <div class="card-dot active"></div>
+                    <div class="card-dot"></div>
+                    <div class="card-dot"></div>
+                </div>
+            </div>
+            <div class="container-card-content">
+                <h3 class="container-card-title">Casa Container 45m²</h3>
+                <div class="card-features">
+                    <div class="card-feature">
+                        <svg class="card-feature-icon" viewBox="0 0 24 24">
+                            <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+                        </svg>
+                        <span>3 Amb</span>
+                    </div>
+                    <div class="card-feature">
+                        <svg class="card-feature-icon" viewBox="0 0 24 24">
+                            <path d="M8,14A2,2 0 0,0 6,16A2,2 0 0,0 8,18A2,2 0 0,0 10,16A2,2 0 0,0 8,14M16,14A2,2 0 0,0 14,16A2,2 0 0,0 16,18A2,2 0 0,0 18,16A2,2 0 0,0 16,14M4,15.27V16.73C4,17.4 4.6,18 5.27,18H18.73C19.4,18 20,17.4 20,16.73V15.27L18.73,14H5.27L4,15.27Z" />
+                        </svg>
+                        <span>1 Baño</span>
+                    </div>
+                </div>
+                <button class="card-view-more-btn">Más información ➜</button>
+            </div>
+        </div>
+
+        <!-- Casa Container 75m² (NUEVA) -->
+        <div class="container-card">
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=300&h=180&fit=crop&crop=center" alt="Casa Container 75m²" class="container-card-image">
+                <button class="card-nav-button card-nav-prev" onclick="previousCardImage(this)">‹</button>
+                <button class="card-nav-button card-nav-next" onclick="nextCardImage(this)">›</button>
+                <div class="card-dots-indicator">
+                    <div class="card-dot active"></div>
+                    <div class="card-dot"></div>
+                    <div class="card-dot"></div>
+                </div>
+            </div>
+            <div class="container-card-content">
+                <h3 class="container-card-title">Casa Container 75m²</h3>
+                <div class="card-features">
+                    <div class="card-feature">
+                        <svg class="card-feature-icon" viewBox="0 0 24 24">
+                            <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+                        </svg>
+                        <span>4 Amb</span>
+                    </div>
+                    <div class="card-feature">
+                        <svg class="card-feature-icon" viewBox="0 0 24 24">
+                            <path d="M8,14A2,2 0 0,0 6,16A2,2 0 0,0 8,18A2,2 0 0,0 10,16A2,2 0 0,0 8,14M16,14A2,2 0 0,0 14,16A2,2 0 0,0 16,18A2,2 0 0,0 18,16A2,2 0 0,0 16,14M4,15.27V16.73C4,17.4 4.6,18 5.27,18H18.73C19.4,18 20,17.4 20,16.73V15.27L18.73,14H5.27L4,15.27Z" />
+                        </svg>
+                        <span>2 Baño</span>
+                    </div>
+                </div>
+                <button class="card-view-more-btn">Más información ➜</button>
+            </div>
+        </div>
+
+        <!-- Casa Container 105m² (NUEVA) -->
+        <div class="container-card">
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=300&h=180&fit=crop&crop=center" alt="Casa Container 105m²" class="container-card-image">
+                <button class="card-nav-button card-nav-prev" onclick="previousCardImage(this)">‹</button>
+                <button class="card-nav-button card-nav-next" onclick="nextCardImage(this)">›</button>
+                <div class="card-dots-indicator">
+                    <div class="card-dot active"></div>
+                    <div class="card-dot"></div>
+                    <div class="card-dot"></div>
+                </div>
+            </div>
+            <div class="container-card-content">
+                <h3 class="container-card-title">Casa Container 105m²</h3>
+                <div class="card-features">
+                    <div class="card-feature">
+                        <svg class="card-feature-icon" viewBox="0 0 24 24">
+                            <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+                        </svg>
+                        <span>5 Amb</span>
+                    </div>
+                    <div class="card-feature">
+                        <svg class="card-feature-icon" viewBox="0 0 24 24">
+                            <path d="M8,14A2,2 0 0,0 6,16A2,2 0 0,0 8,18A2,2 0 0,0 10,16A2,2 0 0,0 8,14M16,14A2,2 0 0,0 14,16A2,2 0 0,0 16,18A2,2 0 0,0 18,16A2,2 0 0,0 16,14M4,15.27V16.73C4,17.4 4.6,18 5.27,18H18.73C19.4,18 20,17.4 20,16.73V15.27L18.73,14H5.27L4,15.27Z" />
+                        </svg>
+                        <span>2 Baño</span>
+                    </div>
+                </div>
+                <button class="card-view-more-btn">Más información ➜</button>
+            </div>
         </div>
     </div>
 
-    <!-- Casa Container 60m² -->
-    <div class="container-card">
-        <div class="card-image-container">
-            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=300&h=180&fit=crop&crop=center" alt="Casa Container 60m²" class="container-card-image">
-            <button class="card-nav-button card-nav-prev" onclick="previousCardImage(this)">‹</button>
-            <button class="card-nav-button card-nav-next" onclick="nextCardImage(this)">›</button>
-            <div class="card-dots-indicator">
-                <div class="card-dot active"></div>
-                <div class="card-dot"></div>
-                <div class="card-dot"></div>
-            </div>
-        </div>
-        <div class="container-card-content">
-            <h3 class="container-card-title">Casa Container 60m²</h3>
-            <div class="card-features">
-                <div class="card-feature">
-                    <svg class="card-feature-icon" viewBox="0 0 24 24">
-                        <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
-                    </svg>
-                    <span>4 Amb</span>
-                </div>
-                <div class="card-feature">
-                    <svg class="card-feature-icon" viewBox="0 0 24 24">
-                        <path d="M8,14A2,2 0 0,0 6,16A2,2 0 0,0 8,18A2,2 0 0,0 10,16A2,2 0 0,0 8,14M16,14A2,2 0 0,0 14,16A2,2 0 0,0 16,18A2,2 0 0,0 18,16A2,2 0 0,0 16,14M4,15.27V16.73C4,17.4 4.6,18 5.27,18H18.73C19.4,18 20,17.4 20,16.73V15.27L18.73,14H5.27L4,15.27Z" />
-                    </svg>
-                    <span>1 Baño</span>
-                </div>
-            </div>
-            <button class="card-view-more-btn">Más información ➜</button>
-        </div>
-    </div>
+    <script>
+        // ============================================
+        // CONFIGURACIÓN DE IMÁGENES PARA CADA TARJETA
+        // ============================================
+        const cardImages = [
+            // TARJETA 1: Casa Container 90m² (3 imágenes)
+            [
+                'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=250&fit=crop&crop=center', // Imagen 1
+                'https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=400&h=250&fit=crop&crop=center', // Imagen 2
+                'https://images.unsplash.com/photo-1600563438938-a42eb1e9ac5b?w=400&h=250&fit=crop&crop=center'  // Imagen 3
+            ],
+            
+            // TARJETA 2: Casa Container 60m² (3 imágenes)
+            [
+                'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=250&fit=crop&crop=center', // Imagen 1
+                'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&h=250&fit=crop&crop=center', // Imagen 2
+                'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=400&h=250&fit=crop&crop=center'  // Imagen 3
+            ],
+            
+            // TARJETA 3: Casa Container 30m² (2 imágenes)
+            [
+                'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&h=250&fit=crop&crop=center', // Imagen 1
+                'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=400&h=250&fit=crop&crop=center'  // Imagen 2
+            ],
+            
+            // TARJETA 4: Casa Container 15m² (2 imágenes)
+            [
+                'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=400&h=250&fit=crop&crop=center', // Imagen 1
+                'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=400&h=250&fit=crop&crop=center'  // Imagen 2
+            ],
+            
+            // TARJETA 5: Casa Container 120m² (3 imágenes) - NUEVA
+            [
+                'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=400&h=250&fit=crop&crop=center', // Imagen 1
+                'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=400&h=250&fit=crop&crop=center', // Imagen 2
+                'https://images.unsplash.com/photo-1600607688969-a5bfcd646154?w=400&h=250&fit=crop&crop=center'  // Imagen 3
+            ],
+            
+            // TARJETA 6: Casa Container 45m² (3 imágenes) - NUEVA
+            [
+                'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=400&h=250&fit=crop&crop=center', // Imagen 1
+                'https://images.unsplash.com/photo-1600607688888-cd23eba9ff27?w=400&h=250&fit=crop&crop=center', // Imagen 2
+                'https://images.unsplash.com/photo-1600563438938-a42eb1e9ac5b?w=400&h=250&fit=crop&crop=center'  // Imagen 3
+            ],
+            
+            // TARJETA 7: Casa Container 75m² (3 imágenes) - NUEVA
+            [
+                'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=400&h=250&fit=crop&crop=center', // Imagen 1
+                'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=250&fit=crop&crop=center', // Imagen 2
+                'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=250&fit=crop&crop=center'  // Imagen 3
+            ],
+            
+            // TARJETA 8: Casa Container 105m² (3 imágenes) - NUEVA
+            [
+                'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&h=250&fit=crop&crop=center', // Imagen 1
+                'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&h=250&fit=crop&crop=center', // Imagen 2
+                'https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=400&h=250&fit=crop&crop=center'  // Imagen 3
+            ]
+        ];
 
-    <!-- Casa Container 30m² -->
-    <div class="container-card">
-        <div class="card-image-container">
-            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=300&h=180&fit=crop&crop=center" alt="Casa Container 30m²" class="container-card-image">
-            <button class="card-nav-button card-nav-prev" onclick="previousCardImage(this)">‹</button>
-            <button class="card-nav-button card-nav-next" onclick="nextCardImage(this)">›</button>
-            <div class="card-dots-indicator">
-                <div class="card-dot active"></div>
-                <div class="card-dot"></div>
-            </div>
-        </div>
-        <div class="container-card-content">
-            <h3 class="container-card-title">Casa Container 30m²</h3>
-            <div class="card-features">
-                <div class="card-feature">
-                    <svg class="card-feature-icon" viewBox="0 0 24 24">
-                        <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
-                    </svg>
-                    <span>2 Amb</span>
-                </div>
-                <div class="card-feature">
-                    <svg class="card-feature-icon" viewBox="0 0 24 24">
-                        <path d="M8,14A2,2 0 0,0 6,16A2,2 0 0,0 8,18A2,2 0 0,0 10,16A2,2 0 0,0 8,14M16,14A2,2 0 0,0 14,16A2,2 0 0,0 16,18A2,2 0 0,0 18,16A2,2 0 0,0 16,14M4,15.27V16.73C4,17.4 4.6,18 5.27,18H18.73C19.4,18 20,17.4 20,16.73V15.27L18.73,14H5.27L4,15.27Z" />
-                    </svg>
-                    <span>1 Baño</span>
-                </div>
-            </div>
-            <button class="card-view-more-btn">Más información ➜</button>
-        </div>
-    </div>
+        // Índices actuales para cada tarjeta (inicia en 0 para mostrar la primera imagen)
+        let currentCardImageIndex = [0, 0, 0, 0, 0, 0, 0, 0];
 
-    <!-- Casa Container 15m² -->
-    <div class="container-card">
-        <div class="card-image-container">
-            <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=300&h=180&fit=crop&crop=center" alt="Casa Container 15m²" class="container-card-image">
-            <button class="card-nav-button card-nav-prev" onclick="previousCardImage(this)">‹</button>
-            <button class="card-nav-button card-nav-next" onclick="nextCardImage(this)">›</button>
-            <div class="card-dots-indicator">
-                <div class="card-dot active"></div>
-                <div class="card-dot"></div>
-            </div>
-        </div>
-        <div class="container-card-content">
-            <h3 class="container-card-title">Casa Container 15m²</h3>
-            <div class="card-features">
-                <div class="card-feature">
-                    <svg class="card-feature-icon" viewBox="0 0 24 24">
-                        <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
-                    </svg>
-                    <span>1 Amb</span>
-                </div>
-                <div class="card-feature">
-                    <svg class="card-feature-icon" viewBox="0 0 24 24">
-                        <path d="M8,14A2,2 0 0,0 6,16A2,2 0 0,0 8,18A2,2 0 0,0 10,16A2,2 0 0,0 8,14M16,14A2,2 0 0,0 14,16A2,2 0 0,0 16,18A2,2 0 0,0 18,16A2,2 0 0,0 16,14M4,15.27V16.73C4,17.4 4.6,18 5.27,18H18.73C19.4,18 20,17.4 20,16.73V15.27L18.73,14H5.27L4,15.27Z" />
-                    </svg>
-                    <span>1 Baño</span>
-                </div>
-            </div>
-            <button class="card-view-more-btn">Más información ➜</button>
-        </div>
-    </div>
-</div>
+                
+        // ============================================
+        // FUNCIONES PARA CONTROLAR EL CARRUSEL
+        // ============================================
+        
+        // Función para actualizar la imagen y los indicadores (puntos)
+        function updateCardImage(cardIndex) {
+            const cards = document.querySelectorAll('.container-card');
+            const card = cards[cardIndex];
+            const img = card.querySelector('.container-card-image');
+            const dots = card.querySelectorAll('.card-dot');
+            
+            // Cambiar la imagen según el índice actual
+            img.src = cardImages[cardIndex][currentCardImageIndex[cardIndex]];
+            
+            // Actualizar los puntos indicadores
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentCardImageIndex[cardIndex]);
+            });
+        }
 
-<!-- JavaScript para la funcionalidad -->
-<script>
-const cardImages = [
-    [
-        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=250&fit=crop&crop=center',
-        'https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=400&h=250&fit=crop&crop=center',
-        'https://images.unsplash.com/photo-1600563438938-a42eb1e9ac5b?w=400&h=250&fit=crop&crop=center'
-    ],
-    [
-        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=250&fit=crop&crop=center',
-        'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&h=250&fit=crop&crop=center',
-        'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=400&h=250&fit=crop&crop=center'
-    ],
-    [
-        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&h=250&fit=crop&crop=center',
-        'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=400&h=250&fit=crop&crop=center'
-    ],
-    [
-        'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=400&h=250&fit=crop&crop=center',
-        'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=400&h=250&fit=crop&crop=center'
-    ]
-];
+        // Función para ir a la siguiente imagen
+        function nextCardImage(button) {
+            const card = button.closest('.container-card');
+            const cardIndex = Array.from(document.querySelectorAll('.container-card')).indexOf(card);
+            
+            // Incrementar el índice o volver al 0 si llegamos al final
+            currentCardImageIndex[cardIndex] = (currentCardImageIndex[cardIndex] + 1) % cardImages[cardIndex].length;
+            updateCardImage(cardIndex);
+        }
 
-let currentCardImageIndex = [0, 0, 0, 0,];
+        // Función para ir a la imagen anterior
+        function previousCardImage(button) {
+            const card = button.closest('.container-card');
+            const cardIndex = Array.from(document.querySelectorAll('.container-card')).indexOf(card);
+            
+            // Decrementar el índice o ir al final si estamos en 0
+            currentCardImageIndex[cardIndex] = currentCardImageIndex[cardIndex] === 0 
+                ? cardImages[cardIndex].length - 1 
+                : currentCardImageIndex[cardIndex] - 1;
+            updateCardImage(cardIndex);
+        }
 
-function updateCardImage(cardIndex) {
-    const cards = document.querySelectorAll('.container-card');
-    const card = cards[cardIndex];
-    const img = card.querySelector('.container-card-image');
-    const dots = card.querySelectorAll('.card-dot');
-    
-    img.src = cardImages[cardIndex][currentCardImageIndex[cardIndex]];
-    
-    dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentCardImageIndex[cardIndex]);
-    });
-}
-
-function nextCardImage(button) {
-    const card = button.closest('.container-card');
-    const cardIndex = Array.from(document.querySelectorAll('.container-card')).indexOf(card);
-    
-    currentCardImageIndex[cardIndex] = (currentCardImageIndex[cardIndex] + 1) % cardImages[cardIndex].length;
-    updateCardImage(cardIndex);
-}
-
-function previousCardImage(button) {
-    const card = button.closest('.container-card');
-    const cardIndex = Array.from(document.querySelectorAll('.container-card')).indexOf(card);
-    
-    currentCardImageIndex[cardIndex] = currentCardImageIndex[cardIndex] === 0 
-        ? cardImages[cardIndex].length - 1 
-        : currentCardImageIndex[cardIndex] - 1;
-    updateCardImage(cardIndex);
-}
-
-// Funcionalidad para botones "ver más"
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.card-view-more-btn').forEach((btn, index) => {
-        btn.addEventListener('click', () => {
-            const sizes = ['90m²', '60m²', '30m²', '15m²'];
-            // Aquí puedes cambiar la funcionalidad según necesites
-            console.log(`Ver más información sobre Casa Container ${sizes[index]}`);
-            // Ejemplo: window.location.href = `/casa-container-${sizes[index].replace('²', '')}`;
+        // ============================================
+        // FUNCIONALIDAD PARA BOTONES "MÁS INFORMACIÓN"
+        // ============================================
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.card-view-more-btn').forEach((btn, index) => {
+                btn.addEventListener('click', () => {
+                    const sizes = ['90m²', '60m²', '30m²', '15m²', '120m²', '45m²', '75m²', '105m²'];
+                    
+                    // Aquí puedes personalizar qué hacer cuando se hace clic en "Más información"
+                    console.log(`Ver más información sobre Casa Container ${sizes[index]}`);
+                    
+                    // OPCIONES DE FUNCIONALIDAD (descomenta la que necesites):
+                    
+                    // 1. Redirigir a una página específica:
+                    // window.location.href = `/casa-container-${sizes[index].replace('²', '')}`;
+                    
+                    // 2. Abrir en nueva ventana:
+                    // window.open(`/casa-container-${sizes[index].replace('²', '')}`, '_blank');
+                    
+                    // 3. Mostrar un modal con más información:
+                    // showModal(sizes[index]);
+                    
+                    // 4. Hacer scroll a una sección específica:
+                    // document.getElementById('detalles').scrollIntoView();
+                    
+                    // 5. Enviar datos por formulario:
+                    // submitContactForm(sizes[index]);
+                });
+            });
         });
-    });
-});
-</script>
+        
+        // ============================================
+        // FUNCIONES ADICIONALES (EJEMPLOS)
+        // ============================================
+        
+        // Ejemplo de función para mostrar modal
+        function showModal(size) {
+            alert(`Información detallada de la Casa Container ${size}`);
+            // Aquí podrías abrir un modal real con más detalles
+        }
+        
+        // Ejemplo de función para enviar formulario de contacto
+        function submitContactForm(size) {
+            // Código para enviar datos del formulario
+            console.log(`Enviando consulta sobre Casa Container ${size}`);
+        }
+    </script>
 
 <style>
         * {
@@ -1135,7 +1355,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         /* Contact Section Styles */
         .contact-section {
-            background: linear-gradient(135deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+            background: linear-gradient(135deg, rgb(147, 193, 97) 0%, rgb(109, 183, 215) 100%);
             padding: 100px 0;
             position: relative;
             overflow: hidden;
@@ -1163,7 +1383,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         .contact-badge {
             display: inline-block;
-            background: rgba(17, 255, 92, 0.418);
+            background: rgb(76, 207, 118);
             color: rgb(42, 164, 217);
             padding: 8px 20px;
             border-radius: 25px;
@@ -1524,7 +1744,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         .footer {
-            background: #00485a;
+            background: rgb(128, 175, 78);
             padding: 60px 0 40px 0;
             color: white;
         }
